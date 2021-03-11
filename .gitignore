@@ -1,0 +1,7 @@
+# .NET Core build folders
+KeyRunnerAPI/bin/
+KeyRunnerAPI/obj/
+
+# Common node modules locations
+Client/node_modules
+Client/wwwroot/node_modules
