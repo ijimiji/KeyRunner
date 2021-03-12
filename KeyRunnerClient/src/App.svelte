@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	let data
 	onMount(async () => {
-		data = await fetch('https://localhost:5001/User/Get').then(x => x.json())
+		data = await fetch('https://localhost:5001/User/GetAll').then(x => x.json())
 	})
 </script>
 
