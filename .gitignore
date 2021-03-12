@@ -3,5 +3,7 @@ KeyRunnerAPI/bin/
 KeyRunnerAPI/obj/
 
 # Common node modules locations
-Client/node_modules
-Client/wwwroot/node_modules
+KeyRunnerClient/node_modules/
+KeyRunnerClient/public/build/
+
+KeyRunnerClient/.DS_Store
