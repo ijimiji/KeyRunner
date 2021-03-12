@@ -8,6 +8,7 @@
 - [ ] Key tracking patterns
 - [ ] Custom CSS styles
 - [ ] Static files and pics
+- [ ] Fabulous logo
 
 ## API
 - [ ] Non-blocking async calls in controllers
@@ -23,3 +24,4 @@
 - [ ] Implement deployment script
 - [ ] Setup a remote server
 - [ ] Write a docker image
+- [ ] CI actions
