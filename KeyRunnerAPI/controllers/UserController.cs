@@ -5,6 +5,7 @@ namespace KeyRunnerAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+
     public class UserController : ControllerBase
     {
         private static User user = new User();

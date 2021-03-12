@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Cors;
 
 namespace KeyRunnerAPI
 {
@@ -25,6 +26,7 @@ namespace KeyRunnerAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(); // Allow accessing API through localhost
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -34,11 +36,12 @@ namespace KeyRunnerAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            // app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
