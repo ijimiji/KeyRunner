@@ -1,4 +1,4 @@
-namespace KeyRunnerAPI
+namespace KeyRunnerAPI.Models
 {
     public class User
     {
