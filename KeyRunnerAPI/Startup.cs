@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using KeyRunnerAPI.Models;
 
 namespace KeyRunnerAPI
 {
@@ -18,6 +19,7 @@ namespace KeyRunnerAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<ApplicationContext>();
             services.AddCors(); // Allow accessing API through localhost
         }
 
