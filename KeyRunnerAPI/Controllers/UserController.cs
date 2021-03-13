@@ -12,8 +12,6 @@ namespace KeyRunnerAPI.Controllers
         public UserController(ApplicationContext context)
         {
             db = context;
-            db.AddRange(new User(), new User());
-            db.SaveChanges();
         }
 
         [Route("Get")]

@@ -1,12 +1,21 @@
 <script>
-	import { onMount } from 'svelte'
-	let data
-	onMount(async () => {
-		data = await fetch('https://localhost:5001/User/GetAll').then(x => x.json())
-	})
+	import Users from "./Users.svelte"
+	import Login from "./Login.svelte"
+	export let menu = 1;
 </script>
 
-<pre>
-	<h1>Hello world</h1>
-	<div>{JSON.stringify(data)}<div>
-</pre>
+
+<ul id="menu">
+	<li><a href="/" on:click|preventDefault={() => (menu = 1)}>Users</a></li> 
+	<li><a href="/" on:click|preventDefault={() => (menu = 2)}>Login</a></li>
+</ul>
+
+{#if menu === 1}
+<Users />
+{:else if menu === 2}
+<Login />
+{:else}
+<h1>
+	Page Not Found
+</h1>
+{/if}
